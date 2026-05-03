@@ -15,38 +15,163 @@
 
     <!-- Hero Section -->
     <header class="hero">
-        <h1 class="glow-text">ScaryFacts</h1>
+        <h1 class="glow-text creepster-font">ScaryFacts</h1>
         <p>A collection of truths that will haunt your mind and keep you awake at night.</p>
         
-        <button class="reveal-btn" id="revealBtn">Reveal a Scary Fact</button>
+        <button class="reveal-btn cinzel-font" id="revealBtn">Reveal a Scary Fact</button>
         
-        <div class="fact-container glass" id="factDisplay">
+        <div class="fact-container glass cinzel-font" id="factDisplay">
             <!-- Fact will be injected here -->
         </div>
     </header>
 
     <!-- Categories Section -->
     <main>
-        <h2 class="section-title">Dark Categories</h2>
-        <div class="cards-grid">
-            <section class="fact-card glass">
-                <h3>👻 Paranormal</h3>
-                <p>Entities and events that defy rational explanation and common sense.</p>
-            </section>
-            <section class="fact-card glass">
-                <h3>🕵️ True Crime</h3>
-                <p>The darkest depths of human depravity and real-life horrors.</p>
-            </section>
-            <section class="fact-card glass">
-                <h3>❓ Unsolved</h3>
-                <p>Baffling mysteries that remain unexplained by science and logic.</p>
-            </section>
-            <section class="fact-card glass">
-                <h3>🧬 Dark Science</h3>
-                <p>Terrifying biological and physical discoveries that sound like fiction.</p>
-            </section>
-        </div>
+        <section class="section-container">
+            <h2 class="section-title cinzel-font">Dark Categories</h2>
+            <div class="cards-grid">
+                <section class="fact-card glass">
+                    <h3>👻 Paranormal</h3>
+                    <p>Entities and events that defy rational explanation and common sense.</p>
+                </section>
+                <section class="fact-card glass">
+                    <h3>🕵️ True Crime</h3>
+                    <p>The darkest depths of human depravity and real-life horrors.</p>
+                </section>
+                <section class="fact-card glass">
+                    <h3>❓ Unsolved</h3>
+                    <p>Baffling mysteries that remain unexplained by science and logic.</p>
+                </section>
+                <section class="fact-card glass">
+                    <h3>🧬 Dark Science</h3>
+                    <p>Terrifying biological and physical discoveries that sound like fiction.</p>
+                </section>
+            </div>
+        </section>
+
+        <section class="section-container">
+            <h2 class="section-title cinzel-font">Notorious Haunted Locations</h2>
+            <div class="locations-grid">
+                <div class="location-card glass">
+                    <div class="location-content">
+                        <h3>Aokigahara Forest</h3>
+                        <p class="location-sub">Japan</p>
+                        <p>Known as the "Sea of Trees", this dense forest at the base of Mount Fuji is notoriously known for the high number of tragic events that occur within its depths. The iron-rich soil is said to interfere with compasses, leaving many hopelessly lost.</p>
+                    </div>
+                </div>
+                <div class="location-card glass">
+                    <div class="location-content">
+                        <h3>Poveglia Island</h3>
+                        <p class="location-sub">Italy</p>
+                        <p>A small island near Venice that was used as a plague quarantine station and later a mental asylum. The soil is rumored to be 50% human ash, and the island is strictly off-limits to visitors today due to its dark history.</p>
+                    </div>
+                </div>
+                <div class="location-card glass">
+                    <div class="location-content">
+                        <h3>Hoia Baciu Forest</h3>
+                        <p class="location-sub">Romania</p>
+                        <p>Often referred to as the "Bermuda Triangle of Transylvania", this forest is famous for intense paranormal activity, unexplained disappearances, and physical harm reported by those who dare to enter its twisted trees.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-container">
+            <h2 class="section-title cinzel-font">The Deep Archives</h2>
+            <div class="archives-list">
+                <div class="archive-item glass">
+                    <span class="archive-date cinzel-font">1959</span>
+                    <div class="archive-text">
+                        <h4>Dyatlov Pass Incident</h4>
+                        <p>Nine experienced hikers fled their tent in the Ural Mountains in the dead of night, in sub-zero temperatures, without proper clothing. Their bodies were found weeks later with inexplicable injuries, some missing eyes and tongues, and trace amounts of radiation on their clothes.</p>
+                    </div>
+                </div>
+                <div class="archive-item glass">
+                    <span class="archive-date cinzel-font">1977</span>
+                    <div class="archive-text">
+                        <h4>The Wow! Signal</h4>
+                        <p>A strong narrowband radio signal received by the Big Ear radio telescope in Ohio. The signal bore the expected hallmarks of non-terrestrial and non-solar system origin. It lasted for the full 72-second window but has never been detected again.</p>
+                    </div>
+                </div>
+                <div class="archive-item glass">
+                    <span class="archive-date cinzel-font">1947</span>
+                    <div class="archive-text">
+                        <h4>SS Ourang Medan</h4>
+                        <p>A ghost ship where the entire crew was found dead, their faces frozen in expressions of sheer terror, staring at the sun with outstretched arms. Before the ship could be fully investigated, it caught fire and exploded, taking its secrets to the bottom of the ocean.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-container">
+            <h2 class="section-title cinzel-font" style="color: var(--accent-purple);">Urban Legends</h2>
+            <div class="cards-grid">
+                <section class="fact-card glass legend-card">
+                    <h3 style="color: var(--accent-purple);">Slender Man</h3>
+                    <p>An unnaturally tall, faceless figure in a dark suit who is said to stalk, abduct, or traumatize people, particularly children. First appearing as an internet meme, the legend has taken on a terrifying life of its own.</p>
+                </section>
+                <section class="fact-card glass legend-card">
+                    <h3 style="color: var(--accent-purple);">Black-Eyed Children</h3>
+                    <p>Paranormal creatures that resemble children between the ages of 6 and 16, with pale skin and black eyes. They reportedly hitchhike or panhandle, inducing an overwhelming sense of dread in those they approach.</p>
+                </section>
+                <section class="fact-card glass legend-card">
+                    <h3 style="color: var(--accent-purple);">The Mothman</h3>
+                    <p>A winged humanoid creature with glowing red eyes. Seen in Point Pleasant, West Virginia, prior to the collapse of the Silver Bridge, it is often considered a harbinger of doom.</p>
+                </section>
+                <section class="fact-card glass legend-card">
+                    <h3 style="color: var(--accent-purple);">Kuchisake-onna</h3>
+                    <p>The "Slit-Mouthed Woman" from Japanese folklore. A malicious spirit carrying a pair of scissors who asks victims if they think she is beautiful before revealing her terrifyingly mutilated face.</p>
+                </section>
+            </div>
+        </section>
+
+        <section class="section-container">
+            <h2 class="section-title cinzel-font" style="color: var(--accent-green);">Cryptid Sightings</h2>
+            <div class="locations-grid">
+                <div class="location-card glass">
+                    <div class="location-content cryptid-content">
+                        <h3 style="color: var(--accent-green);">Chupacabra</h3>
+                        <p class="location-sub" style="color: var(--accent-green);">The Americas</p>
+                        <p>Meaning "goat-sucker", this creature is blamed for the death of livestock by draining their blood. Descriptions vary from a reptilian, alien-like entity to a hairless, mangy canine.</p>
+                    </div>
+                </div>
+                <div class="location-card glass">
+                    <div class="location-content cryptid-content">
+                        <h3 style="color: var(--accent-green);">Skinwalkers</h3>
+                        <p class="location-sub" style="color: var(--accent-green);">Navajo Lore</p>
+                        <p>A type of harmful witch who has the ability to turn into, possess, or disguise themselves as an animal. They represent the antithesis of Navajo cultural values and are deeply feared.</p>
+                    </div>
+                </div>
+                <div class="location-card glass">
+                    <div class="location-content cryptid-content">
+                        <h3 style="color: var(--accent-green);">Wendigo</h3>
+                        <p class="location-sub" style="color: var(--accent-green);">Algonquian Folklore</p>
+                        <p>A mythological, flesh-eating monster or evil spirit native to the northern forests of Nova Scotia, the East Coast of Canada, and Great Lakes Region of Canada and the United States.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
+
+    <!-- Chatbot Floating Window -->
+    <div class="chatbot-window glass" id="chatbotWindow">
+        <div class="chatbot-header">
+            <h3 style="color: var(--accent-purple);">Fact Explorer AI</h3>
+            <button class="close-chatbot" id="closeChatbot">&times;</button>
+        </div>
+        <iframe
+            src="https://www.chatbase.co/chatbot-iframe/N279BVi1K47-WOsEOV11p"
+            width="100%"
+            style="height: 100%; min-height: 700px; border-radius: 0 0 12px 12px; border: none; background: transparent;"
+            frameborder="0"
+            allow="microphone"
+        ></iframe>
+    </div>
+
+    <!-- Chatbot Toggle Icon -->
+    <div class="chatbot-toggle" id="chatbotToggle" title="Fact Explorer AI">
+        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-message-square"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+    </div>
 
     <footer>
         <p>&copy; 2026 ScaryFacts &bull; Hand-crafted with terror</p>

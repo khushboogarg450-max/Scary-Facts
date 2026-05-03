@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Creepster&family=Outfit:wght@300;400;700&display=swap');
 
 :root {
     --bg-color: #050505;
@@ -10,6 +10,20 @@
     --card-bg: rgba(20, 20, 20, 0.6);
     --glass-border: rgba(255, 255, 255, 0.1);
     --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    --accent-purple: #9b5de5;
+    --accent-purple-glow: rgba(155, 93, 229, 0.4);
+    --accent-green: #00f5d4;
+    --accent-green-glow: rgba(0, 245, 212, 0.4);
+}
+
+/* Typography Utility Classes */
+.cinzel-font {
+    font-family: 'Cinzel', serif;
+}
+
+.creepster-font {
+    font-family: 'Creepster', cursive;
+    letter-spacing: 4px;
 }
 
 * {
@@ -214,4 +228,197 @@ footer {
 
 ::-webkit-scrollbar-thumb:hover {
     background: var(--accent-red);
+}
+
+/* Chatbot Floating UI */
+.chatbot-toggle {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 60px;
+    height: 60px;
+    background: var(--card-bg);
+    border: 1px solid var(--accent-red);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 15px var(--accent-red-glow);
+    z-index: 1000;
+    transition: var(--transition-smooth);
+}
+
+.chatbot-toggle svg {
+    color: var(--accent-red);
+    transition: var(--transition-smooth);
+}
+
+.chatbot-toggle:hover {
+    transform: scale(1.1) translateY(-5px);
+    background: var(--accent-red);
+    box-shadow: 0 0 30px var(--accent-red);
+}
+
+.chatbot-toggle:hover svg {
+    color: var(--text-primary);
+}
+
+.chatbot-window {
+    position: fixed;
+    bottom: 110px;
+    right: 30px;
+    width: 400px;
+    height: 800px;
+    max-height: calc(100vh - 150px);
+    max-width: calc(100vw - 60px);
+    z-index: 999;
+    display: flex;
+    flex-direction: column;
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(20px) scale(0.95);
+    transition: var(--transition-smooth);
+    border: 1px solid var(--glass-border);
+    box-shadow: 0 10px 40px rgba(0,0,0,0.8);
+    overflow: hidden;
+}
+
+.chatbot-window.active {
+    opacity: 1;
+    pointer-events: all;
+    transform: translateY(0) scale(1);
+    border-color: var(--accent-red-glow);
+}
+
+.chatbot-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background: rgba(10, 10, 10, 0.9);
+    border-bottom: 1px solid var(--glass-border);
+}
+
+.chatbot-header h3 {
+    color: var(--text-primary);
+    font-size: 1.1rem;
+    font-weight: 400;
+    margin: 0;
+    letter-spacing: 1px;
+}
+
+.close-chatbot {
+    background: none;
+    border: none;
+    color: var(--text-secondary);
+    font-size: 1.5rem;
+    line-height: 1;
+    transition: var(--transition-smooth);
+}
+
+.close-chatbot:hover {
+    color: var(--accent-red);
+    text-shadow: 0 0 10px var(--accent-red-glow);
+    transform: scale(1.2);
+}
+
+/* Locations Grid */
+.locations-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    padding: 0 5vw 100px;
+}
+
+.location-card {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    transition: var(--transition-smooth);
+}
+
+.location-card:hover {
+    transform: translateY(-10px);
+    border-color: var(--accent-red);
+    box-shadow: 0 10px 30px rgba(255, 43, 43, 0.1);
+}
+
+.location-content {
+    padding: 30px;
+}
+
+.location-content h3 {
+    color: var(--text-primary);
+    font-size: 1.4rem;
+    margin-bottom: 5px;
+}
+
+.location-sub {
+    color: var(--accent-red);
+    font-size: 0.9rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+}
+
+.location-content p:not(.location-sub) {
+    color: var(--text-secondary);
+    font-size: 1rem;
+    line-height: 1.7;
+}
+
+/* Archives List */
+.archives-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 0 5vw 100px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.archive-item {
+    display: flex;
+    align-items: flex-start;
+    padding: 30px;
+    gap: 30px;
+    transition: var(--transition-smooth);
+}
+
+.archive-item:hover {
+    border-left: 4px solid var(--accent-red);
+    transform: translateX(10px);
+    background: rgba(255, 43, 43, 0.05);
+}
+
+.archive-date {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--accent-red);
+    opacity: 0.8;
+    min-width: 100px;
+}
+
+.archive-text h4 {
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+    color: var(--text-primary);
+}
+
+.archive-text p {
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+    .archive-item {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .archive-date {
+        font-size: 1.5rem;
+    }
 }
